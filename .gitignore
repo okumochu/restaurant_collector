@@ -1,6 +1,0 @@
-.env
-.DS_Store
-data_collect_venv
-output.md
-__pycache__
-.gitignore
