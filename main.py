@@ -27,7 +27,7 @@ def mutiprocess_task(url_list):
 
 
 if __name__ == '__main__':
-    url_list = get_restaurant_urls(1)
+    url_list = get_restaurant_urls(int(input('你要搜尋幾間餐廳: ')))
     print(len(url_list))
     pool = Pool(processes=6)
     pool.map(mutiprocess_task, url_list)
