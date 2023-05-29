@@ -23,11 +23,13 @@ def mutiprocess_task(url_list):
         print('start comments->gpt format')
         message, index = article_to_GPT(comments, 0)
         print('start gpt->summary')
-        summary(name, message=message, api_key=os.getenv("openai_api_key"))
+        summary(name, message=message, focus_point=focus_point,
+                api_key=os.getenv("openai_api_key"))
 
 
 if __name__ == '__main__':
     url_list = get_restaurant_urls(int(input('你要搜尋幾間餐廳: ')))
+    focus_point = input('請問您在意的點是什麼： ')
     print(len(url_list))
     pool = Pool(processes=6)
     pool.map(mutiprocess_task, url_list)
