@@ -43,36 +43,35 @@ def get_restaurant_urls(n_restaurants):
         pass
 
     # search restaurants by button
-
     try:
-        button = WebDriverWait(driver, 15).until(
-            EC.presence_of_element_located(
-                (
-                    By.XPATH,
-                    '//*[@id="assistive-chips"]/div/div/div/div[1]/div/div/div/div/div[2]/div[2]/div[1]/button',
+        try:
+            button = WebDriverWait(driver, 15).until(
+                EC.presence_of_element_located(
+                    (
+                        By.XPATH,
+                        '//*[@id="assistive-chips"]/div/div/div/div[1]/div/div/div/div/div[2]/div[2]/div[1]/button',
+                    )
                 )
             )
-        )
+        except:
+            button = WebDriverWait(driver, 15).until(
+                EC.presence_of_element_located(
+                    (
+                        By.XPATH,
+                        '//*[@id="omnibox-singlebox"]/div[1]/div[4]/div/div[1]/div/div/div/div/div[2]/div[2]/div[1]/button',
+                    )
+                )
+            )
+        button.click()
     except:
-        button = WebDriverWait(driver, 15).until(
-            EC.presence_of_element_located(
-                (
-                    By.XPATH,
-                    '//*[@id="omnibox-singlebox"]/div[1]/div[4]/div/div[1]/div/div/div/div/div[2]/div[2]/div[1]/button',
-                )
-            )
+        # search restaurants by search box
+        search_box = WebDriverWait(driver, 15).until(
+            EC.presence_of_element_located((By.NAME, "q"))
+        # //input[@name='q']
         )
-    button.click()
-
-    # search restaurants by search box
-
-    # search_box = WebDriverWait(driver, 15).until(
-    #     EC.presence_of_element_located((By.NAME, "q"))
-    # //input[@name='q']
-    # )
-    # search_box.clear()
-    # search_box.send_keys("餐廳")
-    # search_box.send_keys(Keys.ENTER)
+        search_box.clear()
+        search_box.send_keys("餐廳")
+        search_box.send_keys(Keys.ENTER)
 
     time.sleep(5)
 
