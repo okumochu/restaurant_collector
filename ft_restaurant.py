@@ -94,8 +94,7 @@ def get_restaurant_urls(n_restaurants):
     time.sleep(5)
     elements = driver.find_elements(By.CLASS_NAME, "hfpxzc")
     lst_url = []
-    for element in elements:
-        restaurant_url = element.get_attribute("href")
-        lst_url.append(restaurant_url)
+    for i in range(n_restaurants):
+        lst_url.append(elements[i].get_attribute("href"))
 
     return lst_url

@@ -17,7 +17,7 @@ def num_tokens_from_messages(messages, model='gpt-3.5-turbo'):
 
 def article_to_GPT(list_of_articles, start_index):
     token_limit = 3500
-    sentence_token = len(max(list_of_articles, key=len))*5
+    sentence_token = len(max(list_of_articles, key=len))*3
     # print(max(list_of_articles))
     # print(sentence_token)
     a = list_of_articles
