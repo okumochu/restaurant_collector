@@ -12,4 +12,4 @@
 
 # what can it do?
 
-### It can generate a summary from the place you select by chatGPT.
+### It can generate a number of restaurants summary from the place you enter.
