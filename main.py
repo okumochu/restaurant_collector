@@ -33,7 +33,7 @@ if __name__ == '__main__':
     focus_point = input('請問您在意的點是什麼： ')
     url_list = get_restaurant_urls(int(input('你要搜尋幾間餐廳: ')))
     print(len(url_list))
-    pool = Pool(processes=6)
+    pool = Pool(processes=3)
     partial_func = partial(mutiprocess_task, focus_point=focus_point)
     pool.map(partial_func, url_list)
     pool.close()
