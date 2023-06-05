@@ -11,7 +11,7 @@ if you want to accelerate your process you can modify n in Pool
 <br><br>
  "pool = Pool(processes=n)"
 <br><br>
-but if N>3 , you need upgrade your openAI payment (rate limit)
+but if n>3 , you need upgrade your openAI payment (rate limit)
 <br><br>
 
 
