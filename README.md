@@ -6,6 +6,10 @@
 5. pip install -r requirements.txt
 6. run your code 
 
+note: if you want to accelerate your process you can modify n
+<br><br>
+ "pool = Pool(processes=n)"
+ 
 <br><br>
 
 
