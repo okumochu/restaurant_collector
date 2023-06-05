@@ -6,7 +6,7 @@
 5. pip install -r requirements.txt
 6. run your code 
 
-##note:
+## note:
 <br><br>
 if you want to accelerate your process you can modify n in Pool
 <br><br>
