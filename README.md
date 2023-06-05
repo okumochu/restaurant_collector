@@ -7,7 +7,6 @@
 6. run your code 
 
 ## note:
-<br><br>
 if you want to accelerate your process you can modify n in Pool
 <br><br>
  "pool = Pool(processes=n)"
